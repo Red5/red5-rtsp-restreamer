@@ -80,8 +80,8 @@ public class ICYStream implements IBroadcastStream, IProvider, IPipeConnectionLi
 		mPublishedName = name;
 		mLivePipe = null;
 		mCodecInfo = new StreamCodecInfo();
-		mCodecInfo.setHasAudio(false);
-		mCodecInfo.setHasVideo(true);
+		((StreamCodecInfo)mCodecInfo).setHasAudio(false);
+		((StreamCodecInfo)mCodecInfo).setHasVideo(true);
 	}
 
 	/**
