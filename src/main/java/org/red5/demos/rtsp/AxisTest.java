@@ -216,7 +216,7 @@ public class AxisTest implements Runnable {
 					int pt = packet[1] & (0xff >> 1);//packet type
 					int sn = packet[2] << 8 | packet[3];//sequence number.
 					long time = packet[4] << 24 | packet[5] << 16 | packet[6] << 8 | packet[7];
-					time = (time / 100);//to milliseconds?
+					time = (time / 90);// from 90hz to milliseconds
 					//first packet.
 					if (streamTime == -1) {
 						streamTime = (int) time;//set start delta.
